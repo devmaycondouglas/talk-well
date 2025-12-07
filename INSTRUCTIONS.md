@@ -16,7 +16,7 @@
   ```
   ou em algumas versões do docker, pode utilizar desta forma:
   ```
-  docker compose up --build
+  docker compose up --build -d
   ```
 
 ## Acessando o projeto
