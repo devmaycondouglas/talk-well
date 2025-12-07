@@ -22,11 +22,11 @@
 ## Acessando o projeto
 
 - A API estará executando no seguinte endereço: [http://localhost](http://localhost)
-- O frontend (Criado em React), estará executando no seguinte endereço: [http://localhost:8080](http://localhost)
+- O frontend (Criado em React), estará executando no seguinte endereço: [http://localhost:8080](http://localhost:8080)
 
 ## Informações
 
-Além da rota de `webhook/` e `conversations/:id/`, adicionei mais uma `conversations/`, onde irá devolver a lista de conversar criadas.
+Além da rota de `webhook/` e `conversations/:id/`, adicionei mais uma `conversations/`, onde irá devolver a lista de conversar criadas que no caso utilizei para listar as conversas a aplicação do frontend.
 
 ## Adicional
 
