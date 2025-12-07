@@ -5,6 +5,10 @@
 
 ## Executar o projeto
   - Renomear o arquivo `.env.example` para `.env`. O arquivo já tem alguns valores setados de sugestão, porem pode ser alterado.
+  - Se preferir pode utilizar o seguinte comando para gerar uma cópia do .env.example para .env:
+  ```
+    cp .env.example .env
+  ```
   - Abrir o terminal e na raiz do projeto, utilizar o comando:
 
   ```
@@ -26,4 +30,6 @@ Além da rota de `webhook/` e `conversations/:id/`, adicionei mais uma `conversa
 
 ## Adicional
 
-Caso queiram testar utilizando o [Insomnia](https://insomnia.rest/), deixei um arquivo na raíz do projeto que utilizei para realizar os testes e documentar um pouco :D
+Caso queiram testar utilizando o [Insomnia](https://insomnia.rest/), deixei um arquivo na raíz do projeto (Insomnia_2025-12-06.yaml) que utilizei para realizar os testes e documentar um pouco :D
+
+Ainda há alguns pontos de melhorias, porém o projeto está bem legal!
