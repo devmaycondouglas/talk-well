@@ -1,0 +1,49 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:17
+    env_file:
+      - .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - "5432"
+    networks:
+      - net_db
+
+  api:
+    build: .
+    depends_on:
+      - db
+    env_file:
+      - .env
+    ports:
+      - "80:8000"
+    volumes:
+      - .:/app
+    networks:
+      - net_db
+      - net_web
+
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    depends_on:
+      - api
+    env_file:
+      - .env
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    networks:
+      - net_web
+
+volumes:
+  postgres_data:
+
+networks:
+  net_db:
+    driver: bridge
+  net_web:
+    driver: bridge

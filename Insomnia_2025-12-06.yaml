@@ -1,0 +1,189 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Talk Well
+meta:
+  id: wrk_da298ebd947441099e0fede6775cdafb
+  created: 1764958585775
+  modified: 1764958585775
+  description: ""
+collection:
+  - url: "{{ _.base_url }}/webhook/"
+    name: Webhook - NEW CONVERSATION
+    meta:
+      id: req_133c3c9807584d6ca4b6011c209c43b7
+      created: 1764958596781
+      modified: 1765032222785
+      isPrivate: false
+      description: ""
+      sortKey: -1764958596781
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "type": "NEW_CONVERSATION",
+            "timestamp": "2025-02-21T10:20:41.349308",
+            "data": {
+                "id": "6a41b347-8d80-4ce9-84ba-7af66f369f58"
+            }
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.base_url }}/conversations/:external_id/"
+    name: Get Conversation by ID
+    meta:
+      id: req_07ea0647f63446e8baba52aa8ac4dd23
+      created: 1764961136249
+      modified: 1765050285149
+      isPrivate: false
+      description: ""
+      sortKey: -1764961136249
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+    pathParameters:
+      - name: external_id
+        value: 7e14a69a-4689-41c6-a95a-167ee6b67b98
+  - url: "{{ _.base_url }}/webhook/"
+    name: Webhook - CLOSE CONVERSATION
+    meta:
+      id: req_2d21d31cb0664e85a794d31ddfc84ea9
+      created: 1765024217018
+      modified: 1765048830075
+      isPrivate: false
+      description: ""
+      sortKey: -1762972053974.5
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "type": "CLOSE_CONVERSATION",
+            "timestamp": "2025-02-21T10:20:45.349308",
+            "data": {
+                "id": "8f62eed3-71ef-4473-8e60-377528760de9"
+            }
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.base_url }}/webhook/"
+    name: Webhook - NEW MESSAGE
+    meta:
+      id: req_276bde5103b64967b4978fb2396d5124
+      created: 1765028153972
+      modified: 1765066886881
+      isPrivate: false
+      description: ""
+      sortKey: -1761978782571.25
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "type": "NEW_MESSAGE",
+            "timestamp": "2025-02-21T10:20:42.349308",
+            "data": {
+                "id": "49108c71-4dca-4af3-9f32-61bc74592687",
+                "direction": "RECEIVED",
+                "content": "",
+                "conversation_id": "dce28276-28da-4313-948c-33beb9aa05d7"
+            }
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.base_url }}/conversations/"
+    name: Get Conversations
+    meta:
+      id: req_773251c46d9544d989014bf0d6e2a99f
+      created: 1765038395441
+      modified: 1765038400796
+      isPrivate: false
+      description: ""
+      sortKey: -1764959866515
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_d94bd7d51aa954fbfd9494387aeba822f8a6796c
+    created: 1764958585777
+    modified: 1764958585777
+environments:
+  name: Base Environment
+  meta:
+    id: env_d94bd7d51aa954fbfd9494387aeba822f8a6796c
+    created: 1764958585776
+    modified: 1764958585776
+    isPrivate: false
+  subEnvironments:
+    - name: Development
+      meta:
+        id: env_d9c51606184e4c97af506c015072e936
+        created: 1764958611703
+        modified: 1764958633577
+        isPrivate: false
+        sortKey: 1764958611703
+      data:
+        base_url: http://localhost
